@@ -1,11 +1,11 @@
 .header {
-  margin-top: 45px;
+  padding-top: 45px;
+  margin: 0 auto;
 }
 
 .header__image {
   width: 173px;
   height: 33px;
-  padding-right: 707px;
   padding-bottom: 41px;
 }
 
