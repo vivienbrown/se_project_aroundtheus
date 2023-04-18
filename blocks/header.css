@@ -1,0 +1,16 @@
+.header {
+  margin-top: 45px;
+}
+
+.header__image {
+  width: 173px;
+  height: 33px;
+  padding-right: 707px;
+  padding-bottom: 41px;
+}
+
+.header__underline {
+  padding: 0;
+  max-width: 100%;
+  height: 1px;
+}

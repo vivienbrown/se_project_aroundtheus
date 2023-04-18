@@ -1,0 +1,17 @@
+.footer__fonts {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #545454;
+  width: 318px;
+  height: 18px;
+}
+
+.footer__positioning {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 72px;
+  padding-bottom: 60px;
+  padding-left: 200px;
+}
