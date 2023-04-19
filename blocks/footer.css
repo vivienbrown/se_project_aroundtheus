@@ -1,13 +1,19 @@
 .footer {
+  max-width: 880px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.78px;
   color: #545454;
-  width: 318px;
-  height: 18px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 72px;
   padding-bottom: 60px;
+}
+
+@media screen and (max-width:596px) {
+  .footer {
+    justify-content: center;
+    max-width: 282px;
+  }
 }
