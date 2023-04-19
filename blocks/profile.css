@@ -1,13 +1,9 @@
 .profile {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: center;
   padding-top: 36.25px;
-}
-
-.profile__image-container {
-  width: 168.75px;
-  height: 127.5px;
+  margin: 0 auto;
 }
 
 .profile__image {
@@ -16,6 +12,7 @@
   border-radius: 50%;
   object-fit: cover;
   background-position: center;
+  margin: 0;
 }
 
 .profile__info {
@@ -33,6 +30,7 @@
   max-width: 373px;
   grid-area: title;
   margin: 0;
+  padding-right: 18px;
 }
 
 .profile__edit-button {
@@ -42,7 +40,7 @@
   grid-area: button;
   align-self: center;
   border: 1px solid white;
-  margin-left: 18px;
+  margin: 0;
 }
 
 .profile__description {
@@ -61,30 +59,39 @@
   border: 1px solid white;
 }
 
-  .profile__info {
-    display: grid;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-@media screen and (max-width:430px) {
-  .profile__title {
-    font-size: 22px;
-  }
+.profile__info {
+  display: grid;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-@media screen and (max-width:596px) {
+@media screen and (max-width: 596px) {
+  .profile {
+    max-width: 282px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
   .profile__add-button {
     width: 282px;
     margin: 0 auto;
   }
-.profile__info {
-
-  padding-bottom: 36px;
+  .profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 36px;
+  }
+  .profile__image {
+    margin: auto;
+  }
+  .profile__title {
+    font-size: 22px;
+    padding-right: 10px;
+  }
 }
-}
 
-@media screen and (max-width:748px) {
+@media screen and (max-width: 748px) {
   /*styles that will make the add button pop underneath the profile__info and span the width of the profile section*/
 }
 
