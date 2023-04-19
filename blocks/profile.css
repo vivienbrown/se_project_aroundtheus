@@ -1,6 +1,8 @@
 .profile {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  padding-top: 36.25px;
 }
 
 .profile__image-container {
@@ -55,25 +57,37 @@
   background: transparent url(../images/add-b.svg) center no-repeat;
   width: 150px;
   height: 50px;
-  margin-left: auto;
+  margin: 0 auto;
   border: 1px solid white;
 }
-@media screen and (max-width: 480px) {
-  .profile {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
   .profile__info {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     width: 100%;
-    padding-left: 62px;
-    padding-right: 62px;
   }
+
+@media screen and (max-width:430px) {
+  .profile__title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:596px) {
+  .profile__add-button {
+    width: 282px;
+    margin: 0 auto;
+  }
+.profile__info {
+
+  padding-bottom: 36px;
+}
 }
 
 @media screen and (max-width:748px) {
   /*styles that will make the add button pop underneath the profile__info and span the width of the profile section*/
 }
+
+/*430 px: the title text size needs to change smaller to keep the edit button next to the name*/
+/*596 px: the add button needs to span the width of the page to neatly sit under the rest of the profile*/
+/*748px: title text size smaller so the add button stays next to the edit button*/
