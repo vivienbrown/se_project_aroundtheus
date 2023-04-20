@@ -53,7 +53,7 @@
 }
 
 .card__like-button {
-  background: transparent url(../images/heart-icon.svg) center no-repeat;
+  background: transparent url(./images/heart-icon.svg) center no-repeat;
   align-self: center;
   width: 21px;
   height: 18px;
