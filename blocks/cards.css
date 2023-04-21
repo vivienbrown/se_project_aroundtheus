@@ -25,6 +25,11 @@
   flex-direction: column;
 }
 
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 .card__image {
   width: 282px;
   height: 282px;
@@ -41,6 +46,7 @@
 }
 
 .card__label-title {
+  margin: 0 auto;
   color: black;
   padding: 25px 69px 25px 20px;
   margin: 0 auto;
@@ -58,4 +64,13 @@
   width: 21px;
   height: 18px;
   border: 0;
+  padding: 0;
+}
+
+.card__like-button:hover {
+  opacity: 50%;
+  transition: 0.1s;
+}
+.card__like-button:active {
+  transform: scale(0.9);
 }

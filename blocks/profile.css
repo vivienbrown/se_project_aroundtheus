@@ -37,13 +37,22 @@
 }
 
 .profile__edit-button {
-  background: transparent url(./images/edit-b.svg) center no-repeat;
+  background: transparent url(../images/edit-b.svg) center no-repeat;
   width: 24px;
   height: 24px;
   grid-area: button;
   align-self: center;
   border: 1px solid white;
   margin: 0;
+}
+
+.profile__edit-button:hover {
+  opacity: 50%;
+  transition: 0.1s;
+}
+
+.profile__edit-button:active {
+  transform: scale(0.9);
 }
 
 .profile__description {
@@ -55,11 +64,20 @@
 }
 
 .profile__add-button {
-  background: transparent url(./images/add-b.svg) center no-repeat;
+  background: transparent url(../images/add-b.svg) center no-repeat;
   width: 150px;
   height: 50px;
   margin: 0 auto;
   border: 1px solid white;
+}
+
+.profile__add-button:hover {
+  opacity: 50%;
+  transition: 0.1s;
+}
+
+.profile__add-button:active {
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 581px) {
@@ -73,6 +91,7 @@
     width: 282px;
     margin: 0 auto;
   }
+
   .profile__info {
     display: flex;
     justify-content: center;
@@ -96,7 +115,3 @@
     font-size: 22px;
   }
 }
-
-/*430 px: the title text size needs to change smaller to keep the edit button next to the name*/
-/*596 px: the add button needs to span the width of the page to neatly sit under the rest of the profile*/
-/*748px: title text size smaller so the add button stays next to the edit button*/
