@@ -14,3 +14,16 @@
   max-width: 100%;
   height: 1px;
 }
+
+@media screen and (max-width: 879px) {
+  .header {
+    padding: 0;
+  }
+  .header__image {
+    width: 126px;
+    height: 24px;
+    padding-bottom: 32px;
+    padding-left: 27px;
+    padding-top: 28px;
+  }
+}

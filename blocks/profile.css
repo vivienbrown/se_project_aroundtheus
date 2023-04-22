@@ -44,6 +44,7 @@
   align-self: center;
   border: 1px solid white;
   margin: 0;
+  cursor: pointer;
 }
 
 .profile__edit-button:hover {
@@ -69,6 +70,7 @@
   height: 50px;
   margin: 0 auto;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .profile__add-button:hover {
@@ -111,7 +113,22 @@
     max-width: 564px;
     grid-template-columns: minmax(auto, 413px) auto;
   }
+  .profile__info {
+    padding-left: 0;
+    padding-bottom: 36px;
+    padding-right: 90px;
+    padding-top: 26.25px;
+  }
   .profile__title {
     font-size: 22px;
+  }
+  .profile__description {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .profile__edit-button {
+    height: 18px;
+    width: 18px;
+    padding: 0;
   }
 }
