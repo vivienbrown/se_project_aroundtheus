@@ -75,3 +75,6 @@
 .card__like-button:active {
   transform: scale(0.9);
 }
+@media screen and (max-width: 596px) {
+  margin-top: 36px;
+}

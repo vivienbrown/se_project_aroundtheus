@@ -108,16 +108,14 @@
   }
 }
 
-@media screen and (min-width: 581px) and (max-width: 668px) {
+@media screen and (min-width: 581px) and (max-width: 669px) {
   .profile {
     max-width: 564px;
     grid-template-columns: minmax(auto, 413px) auto;
   }
   .profile__info {
     padding-left: 0;
-    padding-bottom: 36px;
-    padding-right: 90px;
-    padding-top: 26.25px;
+    margin-left: 19px;
   }
   .profile__title {
     font-size: 22px;
