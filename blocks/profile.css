@@ -16,7 +16,7 @@ I notice that the image appears this way until the small resolution where it dis
 .profile__image-container {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 9999px;
   overflow: hidden;
 }
 
