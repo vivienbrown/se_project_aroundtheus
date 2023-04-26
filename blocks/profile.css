@@ -7,24 +7,15 @@
   max-width: 880px;
 }
 
-/*Dear reviewer, the links that you are sending me such as this one: https://skr.sh/sJSTiCckJN3?a are not loading the page. As such I do not know what you are referring to. 
-
-I have made an educated guess and I have come up with the below styles, however my image is now squashed and I have so far been unable to resolve. It has been 12 hours since I posted in the discord for help with this issue and I have not found the answer by searching the web either.
-
-I notice that the image appears this way until the small resolution where it displays as I have styled it. I have inspected using devtools and I can see that the browser is overriding my specified styles. I have tried increasing specificity (I first simply added both classes to the image before creating a div container around it) but that applied a different calculation by the browser making the image much too large. I have as yet been unable to correct this. Please send help. */
-
-.profile__image-container {
-  width: 120px;
-  height: 120px;
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
 .profile__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  overflow: hidden;
 }
 
 .profile__info {
