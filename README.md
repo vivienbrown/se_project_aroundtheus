@@ -4,11 +4,13 @@
 
 * Intro  
 * Figma  
-* Images  
+* Images 
+* Features
+* Github
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is made so all the elements are displayed correctly on popular screen sizes. It includes a profile section in which users can upload their own avatar image and six cards upon which their interests will be displayed. In this case it is one man's exploration of key landmarks and locations within the United States.
   
 **Figma**  
   
@@ -16,31 +18,25 @@ This project is made so all the elements are displayed correctly on popular scre
   
 **Images**  
   
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
- 
-Good luck and have fun!
+![Yosemite Valley] (./images/yosemite.jpg)
+![Lake Louise] (./images/lake-louise.jpg)
+![Bald Mountains] (./images/bald-mountains.jpg)
+![Latemar] (./images/latemar.jpg)
+![Vanoise National Park] (./images/vanoise.jpg)
+![Lago di Braies] (./images/lago.jpg)
 
-1. Title: Around The US
 
-2. A profile page in which users can upload their own images, interests and experiences and other users can "like" their individual categories
 
-3. This project is made so all the elements are displayed correctly on popular screen sizes.
-- adding fonts with @font-face
-- media queries for different screen widths
-- Semantic HTML5
-- Flexbox
-- Grid
-- Positioning
-- Flat BEM
-- CSS transform
+**Features**
+* adding fonts with @font-face
+* media queries for different screen widths
+* Semantic HTML5
+* Flexbox
+* Grid
+* Positioning
+* Flat BEM
+* CSS transform
 
-4. Pictures, GIFs, or screenshots that detail the project features 
-Yosemite Valley
-Lake Louise
-Bald Mountains
-Latemar
-Vanoise National Park
-Lago de Braies
+**Github**
 
-5. The link to GitHub Pages
+(https://vmfb-rio.github.io/se_project_aroundtheus/ "My github pages link")
