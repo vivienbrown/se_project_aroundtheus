@@ -23,6 +23,9 @@
     "description description";
   grid-template-columns: minmax(auto, 391px) auto;
   flex-wrap: wrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__title {
@@ -49,9 +52,8 @@
 }
 
 .profile__edit-button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.6);
   transition: 0.1s;
-  opacity: 80%;
 }
 
 .profile__description {
@@ -74,7 +76,7 @@
 
 .profile__add-button:hover {
   transition: 0.1s;
-  opacity: 80%;
+  opacity: 60%;
 }
 
 @media screen and (max-width: 880px) {
@@ -90,9 +92,6 @@
   }
   .profile__info {
     margin-left: 19px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     grid-template-columns: auto;
   }
 }
