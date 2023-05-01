@@ -65,13 +65,16 @@
 }
 
 .profile__add-button {
+  display: flex;
   background: transparent url(../images/add-b.svg) center no-repeat;
   width: 150px;
   height: 50px;
-  margin: 0 auto;
+  margin: auto 0;
+  margin-left: 165px;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .profile__add-button:hover {
