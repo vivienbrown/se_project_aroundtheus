@@ -35,6 +35,7 @@
   grid-area: title;
   margin: 0;
   padding-right: 18px;
+  padding-bottom: 7px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -62,6 +63,9 @@
   font-weight: 400;
   grid-area: description;
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .profile__add-button {
@@ -157,5 +161,8 @@
   }
   .profile__title {
     padding-right: 10px;
+  }
+  .profile__description {
+    margin-top: 14px;
   }
 }
