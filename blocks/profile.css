@@ -17,15 +17,13 @@
 
 .profile__info {
   margin-left: 19px;
+  margin-right: 19px;
   display: grid;
   grid-template-areas:
     "title button"
     "description description";
   grid-template-columns: minmax(auto, 391px) auto;
   flex-wrap: wrap;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .profile__title {
@@ -74,8 +72,7 @@
   background: transparent url(../images/add-b.svg) center no-repeat;
   width: 150px;
   height: 50px;
-  margin: auto 0;
-  margin-left: 165px;
+  margin-left: auto;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
@@ -143,7 +140,7 @@
   }
   .profile__add-button {
     width: 282px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .profile__info {
