@@ -133,6 +133,7 @@
 
 @media screen and (max-width: 581px) {
   .profile {
+    margin: 0 auto;
     max-width: 282px;
     display: flex;
     flex-wrap: wrap;
@@ -144,10 +145,11 @@
   }
 
   .profile__info {
-    margin-top: 26.25px;
     display: flex;
     justify-content: center;
+    padding-top: 26.25px;
     padding-bottom: 36px;
+    max-width: 282px;
   }
 
   .profile__edit-button {
