@@ -9,9 +9,8 @@
   display: none;
 }
 .modal__opened {
-    display: flex;
-  }
-  
+  display: flex;
+}
 
 .modal__container {
   margin: 0 auto;
@@ -40,7 +39,7 @@
   flex-direction: column;
 }
 
-.input {
+.modal__form-input {
   opacity: 0.2;
   border: 1px solid transparent;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
