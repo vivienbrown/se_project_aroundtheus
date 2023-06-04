@@ -23,7 +23,7 @@
             alt="avatar" />
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
-            <button type="button" class="profile__edit-button"></button>
+            <button type="button" class="profile__edit-button" id="#profileEditBtn"></button>
             <p class="profile__description">Explorer</p>
           </div>
           <button type="button" class="profile__add-button"></button>
@@ -109,9 +109,9 @@
         <p class="footer__copyright">&copy; 2023 Vivien MF Brown</p>
       </footer>
     </div>
-    <div class="modal">
+    <div class="modal" id="profileEditModal">
       <div class="modal__container">
-        <button class="modal__close"></button>
+        <button class="modal__close" id="profileCloseModal"></button>
         <p class="modal__heading">Edit profile</p>
         <form class="modal__form">
           <input class="modal__form-input" type="text" placeholder="Name" />
