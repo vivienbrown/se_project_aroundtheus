@@ -31,19 +31,22 @@ console.log(initialCards);
 const profileEditBtn = document.querySelector("#profileEditBtn");
 const profileEditModal = document.querySelector("#profileEditModal");
 
-
-
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
 const profileCloseModal = document.querySelector("#profileCloseModal");
 
-const profileTitle = doc.querySelector(js-profile-title);
-const profileDescription = doc.querySelector(js - profile - description);
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
 
-console.log(profileTitletextContent);
+const profileTitleInput = document.querySelector(".profile__title");
+const profileDescriptionInput = document.querySelector("profile__description");
 
 profileEditBtn = addEventListener("click", () => {
   profileEditModal.classList.add("modal__opened");
 });
+
+profileTitleInput.value = profileTitle.textContent;
+profileDescriptionInput.value = profileDescription.textContent;
+
 profileCloseBtn = addEventListener("click", () => {
   profileCloseModal.classList.remove("modal__opened");
 });
