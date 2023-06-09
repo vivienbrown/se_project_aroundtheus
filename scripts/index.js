@@ -26,27 +26,25 @@ const initialCards = [
 ];
 console.log(initialCards);
 
-// elements
+// edit button
 
 const profileEditBtn = document.querySelector("#profileEditBtn");
 const profileEditModal = document.querySelector("#profileEditModal");
-
-const profileCloseBtn = document.querySelector("#profileCloseBtn");
-const profileCloseModal = document.querySelector("#profileCloseModal");
-
-const profileTitle = document.querySelector(".profile__title");
-const profileDescription = document.querySelector(".profile__description");
-
-const profileTitleInput = document.querySelector(".profile__title");
-const profileDescriptionInput = document.querySelector("profile__description");
-
-profileEditBtn = addEventListener("click", () => {
+profileEditBtn.addEventListener("click", () => {
   profileEditModal.classList.add("modal__opened");
 });
 
-profileTitleInput.value = profileTitle.textContent;
-profileDescriptionInput.value = profileDescription.textContent;
+// close button
 
-profileCloseBtn = addEventListener("click", () => {
+const profileCloseBtn = document.querySelector("#profileCloseBtn");
+const profileCloseModal = document.querySelector("#profileCloseModal");
+profileCloseBtn.addEventListener("click", () => {
   profileCloseModal.classList.remove("modal__opened");
 });
+
+// Input fields
+
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+profileTitleInput = profileTitle.textContent;
+profileDescriptionInput = profileDescription.textContent;
