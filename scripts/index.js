@@ -37,7 +37,6 @@ profileEditBtn.addEventListener("click", () => {
 // close button
 
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
-const profileCloseModal = document.querySelector("#profileCloseModal");
 profileCloseBtn.addEventListener("click", () => {
   profileCloseModal.classList.remove("modal__opened");
 });
