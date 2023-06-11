@@ -64,9 +64,8 @@ function handleProfileEditSubmit(e) {
 
 //cards
 
-const cardTemplate = document.querySelector(
-  "#card-template".content.firstElementChild
-);
+const cardTemplate =
+  document.querySelector("#card-template").content.firstElementChild;
 
 initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
