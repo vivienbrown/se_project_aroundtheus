@@ -64,11 +64,11 @@ function handleProfileEditSubmit(e) {
 
 //cards
 
-const cardTemplate =
-  document.querySelector(("#card-template").content.firstElementChild);
+const cardTemplate = document.querySelector(
+  "#card-template".content.firstElementChild
+);
 
-initialCards.forEach((cardData) {
-
+initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
 
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -81,7 +81,7 @@ initialCards.forEach((cardData) {
 
   cardTitleEl.textcontent = cardData.name;
   //  return the ready HTML element with the filled-in data
-//return cardElement;
+  return cardElement;
   const cardListEl = document.querySelector(".cards__list");
   cardListEl.append(cardElement);
-};
+});
