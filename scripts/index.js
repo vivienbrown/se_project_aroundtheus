@@ -71,12 +71,12 @@ initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
 
   const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__title");
+  const cardTitleEl = cardElement.querySelector(".card__label-title");
 
   cardImageEl.textContent = cardData.link;
 
-  const cardAltTextEl = cardElement.querySelector(".card__title");
-  cardAltTextEl.textContent = cardData.name;
+  const cardImageEl.alt = cardElement.querySelector(".card__label-title");
+  cardImageEl.alt = cardData.name;
 
   cardTitleEl.textcontent = cardData.name;
   //  return the ready HTML element with the filled-in data
