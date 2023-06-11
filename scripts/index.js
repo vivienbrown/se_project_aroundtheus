@@ -65,23 +65,23 @@ function handleProfileEditSubmit(e) {
 //cards
 
 const cardTemplate =
-  document.querySelector(("#card-template").content.firstElementChild;
+  document.querySelector(("#card-template").content.firstElementChild);
 
-initialCards.forEach(cardData) => {
-  //  clone the template element with all its content and store it in a cardElement variable
+initialCards.forEach((cardData) {
+
   const cardElement = cardTemplate.cloneNode(true);
-  //  access the card title and image and store them in variables
+
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
-  //  set the path to the image to the link field of the object
+
   cardImageEl.textContent = cardData.link;
-  //  set the image alt text to the name field of the object
+
   const cardAltTextEl = cardElement.querySelector(".card__title");
   cardAltTextEl.textContent = cardData.name;
-  //  set the card title to the name field of the object, too
+
   cardTitleEl.textcontent = cardData.name;
   //  return the ready HTML element with the filled-in data
 //return cardElement;
   const cardListEl = document.querySelector(".cards__list");
   cardListEl.append(cardElement);
-});
+};
