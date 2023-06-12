@@ -74,13 +74,13 @@ initialCards.forEach((cardData) => {
   const cardTitleEl = cardElement.querySelector(".card__label-title");
 
   cardImageEl.textContent = cardData.link;
-
-  const cardImageEl.alt = cardElement.querySelector(".card__label-title");
   cardImageEl.alt = cardData.name;
+  cardImageEl.src = cardData.link;
 
   cardTitleEl.textcontent = cardData.name;
   //  return the ready HTML element with the filled-in data
-  return cardElement;
-  const cardListEl = document.querySelector(".cards__list");
+
+  const cardListEl = document.querySelector("#cardsContainer");
   cardListEl.append(cardElement);
+  return cardElement;
 });
