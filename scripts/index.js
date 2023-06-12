@@ -73,7 +73,7 @@ initialCards.forEach((cardData) => {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__label-title");
 
-  cardImageEl.textContent = cardData.link;
+  cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
 
