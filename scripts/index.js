@@ -37,10 +37,6 @@ const profileDescriptionInput = document.querySelector(
 );
 const profileEditForm = document.querySelector(".modal__form");
 
-function closePopup() {
-  profileEditModal.classList.remove("modal__opened");
-}
-
 const cardImageEl = cardElement.querySelector(".card__image");
 const cardTitleEl = cardElement.querySelector(".card__label-title");
 
@@ -50,6 +46,10 @@ const cardListEl = document.querySelector("#cardsContainer");
 
 profileTitleInput.value = profileTitle.textContent;
 profileDescriptionInput.value = profileDescription.textContent;
+
+function closePopup() {
+  profileEditModal.classList.remove("modal__opened");
+}
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
