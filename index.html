@@ -33,10 +33,7 @@
         </section>
 
         <section class="cards page__section">
-          <ul class="cards__container"
-          id="cardsContainer">
-         
-          </ul>
+          <ul class="cards__container" id="cardsContainer"></ul>
         </section>
       </main>
       <footer class="footer">
@@ -45,20 +42,22 @@
     </div>
     <div class="modal" id="profileEditModal">
       <div class="modal__container">
-        <button class="modal__close" id="profileCloseBtn"></button>
-        <p class="modal__heading">Edit profile</p>
-        <form class="modal__form">
+        <button class="modal__close" id="profileCloseBtn" type="button"></button>
+        <h2 class="modal__heading">Edit profile</h2>
+        <form class="modal__form" name>
           <input
+            name
             class="modal__form-input"
             type="text"
             id="profile-title-input"
             placeholder="Name" />
           <input
+            name
             class="modal__form-input"
             type="text"
             id="profile-description-input"
             placeholder="About me" />
-          <button class="modal__save">Save</button>
+          <button class="modal__save" type="button">Save</button>
         </form>
       </div>
     </div>
@@ -68,9 +67,7 @@
         <img class="card__image" src="" alt="" />
         <div class="card__label">
           <h2 class="card__label-title"></h2>
-          <button type="button" class="card__like-button">
-            <img src="./images/heart-icon.svg" alt="heart button" />
-          </button>
+          <button type="button" class="card__like-button"></button>
         </div>
       </li>
     </template>
