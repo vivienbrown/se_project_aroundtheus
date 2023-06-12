@@ -28,9 +28,6 @@ const initialCards = [
 const profileEditBtn = document.querySelector("#profileEditBtn");
 const profileEditModal = document.querySelector("#profileEditModal");
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
-
-const profileTitle = document.querySelector(".profile__title");
-const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
@@ -40,8 +37,6 @@ const profileEditForm = document.querySelector(".modal__form");
 const cardImageEl = cardElement.querySelector(".card__image");
 const cardTitleEl = cardElement.querySelector(".card__label-title");
 
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
 const cardListEl = document.querySelector("#cardsContainer");
 
 profileTitleInput.value = profileTitle.textContent;
