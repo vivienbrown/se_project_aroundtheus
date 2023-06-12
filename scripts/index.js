@@ -27,14 +27,6 @@ const initialCards = [
 
 const profileEditBtn = document.querySelector("#profileEditBtn");
 const profileEditModal = document.querySelector("#profileEditModal");
-
-profileTitleInput.value = profileTitle.textContent;
-profileDescriptionInput.value = profileDescription.textContent;
-
-function closePopup() {
-  profileEditModal.classList.remove("modal__opened");
-}
-
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
 
 const profileTitle = document.querySelector(".profile__title");
@@ -43,8 +35,21 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-
 const profileEditForm = document.querySelector(".modal__form");
+
+function closePopup() {
+  profileEditModal.classList.remove("modal__opened");
+}
+
+const cardImageEl = cardElement.querySelector(".card__image");
+const cardTitleEl = cardElement.querySelector(".card__label-title");
+
+const cardTemplate =
+  document.querySelector("#card-template").content.firstElementChild;
+const cardListEl = document.querySelector("#cardsContainer");
+
+profileTitleInput.value = profileTitle.textContent;
+profileDescriptionInput.value = profileDescription.textContent;
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -53,28 +58,20 @@ function handleProfileEditSubmit(e) {
   closePopup();
 }
 
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
-
 initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
-
-  const cardImageEl = cardElement.querySelector(".card__image");
-  const cardTitleEl = cardElement.querySelector(".card__label-title");
-
-  cardTitleEl.textContent = cardData.name;
-  cardImageEl.alt = cardData.name;
-  cardImageEl.src = cardData.link;
-
-  cardTitleEl.textcontent = cardData.name;
-
-  const cardListEl = document.querySelector("#cardsContainer");
-  cardListEl.append(cardElement);
-  return cardElement;
 });
+
+cardTitleEl.textContent = cardData.name;
+cardImageEl.alt = cardData.name;
+cardImageEl.src = cardData.link;
+cardTitleEl.textcontent = cardData.name;
 
 profileEditBtn.addEventListener("click", () => {
   profileEditModal.classList.add("modal__opened");
   profileCloseBtn.addEventListener("click", closePopup);
   profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 });
+
+cardListEl.append(cardElement);
+return cardElement;
