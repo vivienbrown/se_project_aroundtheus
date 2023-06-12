@@ -8,6 +8,9 @@
   z-index: 99;
   display: none;
 }
+.modal__opened {
+  display: flex;
+}
 
 .modal__container {
   margin: 0 auto;
