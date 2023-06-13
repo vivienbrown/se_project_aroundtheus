@@ -19,9 +19,10 @@
 }
 
 .card__label-title {
-  margin: 0 auto;
+  margin: 0;
+  width: 220px;
   color: black;
-  padding: 25px 69px 25px 20px;
+  padding: 25px 0 25px 20px;
   font-size: 24px;
   line-height: 29.05px;
   font-weight: 900;
@@ -31,6 +32,7 @@
 }
 
 .card__like-button {
+  background-image: url(../images/heart-icon.svg);
   background-color: transparent;
   align-self: center;
   width: 21px;
@@ -43,5 +45,4 @@
 .card__like-button:hover {
   opacity: 50%;
   transition: 0.1s;
-  background-image: url(../images/heart-icon.svg);
 }
