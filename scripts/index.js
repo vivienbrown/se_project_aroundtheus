@@ -28,12 +28,12 @@ const initialCards = [
 const profileEditBtn = document.querySelector("#profileEditBtn");
 const profileEditModal = document.querySelector("#profileEditModal");
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
+const profileTitle = document.querySelector("#profile-title");
+const profileDescription = document.querySelector("#profile-description");
 const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
-const profileTitle = document.querySelector("#profileTitle");
-const profileDescription = document.querySelector("#profileDescription");
 
 const profileEditForm = document.querySelector(".modal__form");
 
@@ -43,16 +43,21 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 
+  //how about telling the save button what to do?
+
 function closePopup() {
   profileEditModal.classList.remove("modal_opened");
 }
 
-function handleProfileEditSubmit(e) {
+
+//this is where I have told the save button what to do, but I have only told it to not refresh the page when the popup is closed. Is it telling it to change the value, or just telling it to hold the value?
+function handleProfileEditSubmit(e) { 
   e.preventDefault();
-  profileTitle.textContent = profileTitleInput.value;
+  profileTitle.textContent = profileTitleInput.value; 
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopup();
+  closePopup(); 
 }
+
 initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -66,8 +71,9 @@ initialCards.forEach((cardData) => {
   return cardElement;
 });
 
+
 profileEditBtn.addEventListener("click", () => {
   profileEditModal.classList.add("modal_opened");
 });
-profileCloseBtn.addEventListener("click", closePopup);
-profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+profileCloseBtn.addEventListener("click", closePopup); 
+profileEditForm.addEventListener("submit", handleProfileEditSubmit); //this is telling the save button when to do the function. I just need to tell it to change the value. 
