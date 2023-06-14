@@ -65,8 +65,6 @@
   right: -40px;
 }
 
-
-
 .modal__button:hover {
   transition: 0.1s;
   opacity: 80%;
@@ -97,7 +95,7 @@
 
 @media screen and (max-width: 581px) {
   .modal__close {
-    top: -26px;
+    top: -39px;
     right: 0;
     width: 26px;
     height: 26px;
