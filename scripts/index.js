@@ -88,7 +88,7 @@ initialCards.forEach((cardData) => {
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
 
-  cardListEl.append(cardElement);
+  cardListEl.prepend(cardElement);
   return cardElement;
 });
 
