@@ -58,6 +58,22 @@ const cardTemplate = document
 
 //define functions
 
+
+//// move card create logic into a separate function -- this creates the actual new card, adding the card data to that new card including the styles. 
+function createCardElement(cardData) {
+  const cardElement = cardTemplate.cloneNode(true); // clone the card template
+  const cardImageEl = cardElement.querySelector(".card__image"); //add the image styles
+  const cardTitleEl = cardElement.querySelector(".card__label-title"); //add the label styles
+
+  cardTitleEl.textContent = cardData.name; //tells it to get the name and put it in the text content of the card title
+  cardImageEl.alt = cardData.name; //same but in the alt text of the image
+  cardImageEl.src = cardData.link; // same but with the link
+
+  return cardElement; //will render the card on the page... so why isn't it happening?
+}
+
+
+
 function closePopup() {
   profileEditModal.classList.remove("modal_opened");
   cardAddModal.classList.remove("modal_opened");
@@ -70,15 +86,32 @@ function handleProfileEditSubmit(e) {
   closePopup();
 }
 
+// inside your handleCardAddSubmit function -- this is where I tell it to make the new card and what information to save inside it. It then can be used in the forEach loop (is this what it means to parse?)
+function handleCardAddSubmit(e) { //gives the function a name that tells me what it's for
+  createCardElement({ //tells James where to put the function - on the create card element function that I defined earlier... so a function to a function? and then what details to include 
+    name: cardAddTitleInput.value, //whatever I put as the title
+    link: cardAddLinkInput.value //whatever I put as the URL
+  })
+};
+/* previous code
 function handleCardAddSubmit(e) {
   e.preventDefault();
   cardAddTitle.textContent = cardAddTitleInput.value;
   cardAddLink.textContent = cardAddLinkInput.value;
   closePopup();
 }
+*/
 
 // identifies the cards and adds a new card to the end of the list I guess ???
 
+// inside the forEach -- for each card this is going to identify the element to attach the cardData and where to put it (at the beginning of the list of cards. the card element is the new card that it is going to add to the card list. it will add the card data (name and link) to the card element and then add that element to the card list.)
+initialCards.forEach((cardData) => {
+  const cardElement = createCardElement(cardData);
+  cardListEl.prepend(cardElement);
+});
+
+/* 
+my previous code
 initialCards.forEach((cardData) => {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -91,6 +124,7 @@ initialCards.forEach((cardData) => {
   cardListEl.prepend(cardElement);
   return cardElement;
 });
+*/
 
 //event listeners
 
@@ -99,8 +133,8 @@ profileEditBtn.addEventListener("click", () => {
   profileDescriptionInput.value = profileDescription.textContent;
   profileEditModal.classList.add("modal_opened");
 });
-addNewCardBtn.addEventListener("click", () => {
-  profileTitleInput.value = profileTitle.textContent;
+addNewCardBtn.addEventListener("click", () => { //this tells James (james = JavaScript) that when I click the add button he is to open up the add modal. I need to break down what these two lines are saying to him
+  profileTitleInput.value = profileTitle.textContent; //the input is the field, the value is whatever textcontent is added
   profileDescriptionInput.value = profileDescription.textContent;
   cardAddModal.classList.add("modal_opened");
 });
@@ -110,3 +144,7 @@ cardAddCloseBtn.addEventListener("click", closePopup);
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
+
+
+
+
