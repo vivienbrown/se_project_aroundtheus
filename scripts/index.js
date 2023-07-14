@@ -46,8 +46,6 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 
-
-
 function createCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
@@ -56,7 +54,10 @@ function createCardElement(cardData) {
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
-
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  deleteButton.addEventListener("click", () => {
+    cardElement.remove("cardElement");
+  });
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
@@ -65,6 +66,7 @@ function createCardElement(cardData) {
 function closePopup() {
   profileEditModal.classList.remove("modal_opened");
   cardAddModal.classList.remove("modal_opened");
+  previewImageModal.classList.remove("modal_opened"); //need to attach this to the close button
 }
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -89,6 +91,11 @@ initialCards.forEach((cardData) => {
   cardListEl.prepend(cardElement);
 });
 
+cardImageEl.addEventListener("click", () => { //it is saying cardImageEl is undefined, but I have it defined in a constant on line 51, as part of the createCardElement function. Should I take it out of the function and refactor the function to grab it from outside, so that I can then also grab it into this event listener?
+  previewImageModal.classList.add("modal_opened");
+  document.querySelector.add(cardData.link); //the video said to search for ***I have not processed this instruction yet
+});
+
 profileEditBtn.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
@@ -101,6 +108,6 @@ addNewCardBtn.addEventListener("click", () => {
 });
 profileCloseBtn.addEventListener("click", closePopup);
 cardAddCloseBtn.addEventListener("click", closePopup);
+previewCloseBtn.addEventListener("click", closePopup);
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
-

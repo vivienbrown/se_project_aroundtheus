@@ -27,7 +27,9 @@
               type="button"
               class="profile__edit-button"
               id="profileEditBtn"></button>
-            <p class="profile__description" id="profile-description">Explorer</p>
+            <p class="profile__description" id="profile-description">
+              Explorer
+            </p>
           </div>
           <button type="button" class="profile__add-button"></button>
         </section>
@@ -42,7 +44,10 @@
     </div>
     <div class="modal" id="profileEditModal">
       <div class="modal__container">
-        <button class="modal__close" id="profileCloseBtn" type="button"></button>
+        <button
+          class="modal__close"
+          id="profileCloseBtn"
+          type="button"></button>
         <h2 class="modal__heading">Edit profile</h2>
         <form class="modal__form" name="modal__form">
           <input
@@ -63,7 +68,10 @@
     </div>
     <div class="modal" id="cardAddModal">
       <div class="modal__container">
-        <button class="modal__close" id="cardAddCloseBtn" type="button"></button>
+        <button
+          class="modal__close"
+          id="cardAddCloseBtn"
+          type="button"></button>
         <h2 class="modal__heading">New Place</h2>
         <form class="modal__form" name="modal__form">
           <input
@@ -82,7 +90,15 @@
         </form>
       </div>
     </div>
-
+    <div class="modal" id="previewImageModal">
+      <!--I have placed the preview image modal here, but it will not have a form or heading like the other modals, only an image and description, therefore note-to-self it does not need all the style classes that give the other modals their format-->
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          id="previewCloseBtn"
+          type="button"></button>
+      </div>
+    </div>
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
