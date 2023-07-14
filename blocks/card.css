@@ -42,11 +42,25 @@
   cursor: pointer;
 }
 
-.card__like-button:active {
+.card__like-button_active {
   background-image: url("../images/Union.svg");
 }
 
 .card__like-button:hover {
   opacity: 50%;
   transition: 0.1s;
+}
+
+.card__delete-button {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/Trash.svg");
+  background-color: transparent;
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 18px;
+  height: 19px;
+  border: none;
+
 }
