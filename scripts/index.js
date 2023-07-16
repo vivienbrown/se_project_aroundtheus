@@ -45,6 +45,7 @@ const cardListEl = document.querySelector("#cardsContainer");
 const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
+const previewImageModal = document.querySelector("#previewImageModal");
 
 function createCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -58,6 +59,13 @@ function createCardElement(cardData) {
   deleteButton.addEventListener("click", () => {
     cardElement.remove("cardElement");
   });
+  cardImageEl.addEventListener("click", () => {
+    previewImageModal.classList.add("modal_opened");
+    previewImageModal.querySelector.add(cardData.link);
+    modalImage.src = cardData.name;
+    modalImage.alt = cardData.link;
+
+  });
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
   cardImageEl.src = cardData.link;
@@ -66,7 +74,7 @@ function createCardElement(cardData) {
 function closePopup() {
   profileEditModal.classList.remove("modal_opened");
   cardAddModal.classList.remove("modal_opened");
-  previewImageModal.classList.remove("modal_opened"); //need to attach this to the close button
+  previewImageModal.classList.remove("modal_opened"); 
 }
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -89,11 +97,6 @@ function handleCardAddSubmit(e) {
 initialCards.forEach((cardData) => {
   const cardElement = createCardElement(cardData);
   cardListEl.prepend(cardElement);
-});
-
-cardImageEl.addEventListener("click", () => { //it is saying cardImageEl is undefined, but I have it defined in a constant on line 51, as part of the createCardElement function. Should I take it out of the function and refactor the function to grab it from outside, so that I can then also grab it into this event listener?
-  previewImageModal.classList.add("modal_opened");
-  document.querySelector.add(cardData.link); //the video said to search for ***I have not processed this instruction yet
 });
 
 profileEditBtn.addEventListener("click", () => {
