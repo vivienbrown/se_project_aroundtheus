@@ -46,13 +46,13 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 const previewImageModal = document.querySelector("#previewImageModal");
-
+const modalImage = cardElement.querySelector(".modalImage");
 function createCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__label-title");
   const likeButton = cardElement.querySelector(".card__like-button");
-  const modalImage = cardElement.querySelector(".modalImage");
+
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
   });
@@ -62,8 +62,8 @@ function createCardElement(cardData) {
   });
   cardImageEl.addEventListener("click", () => {
     previewImageModal.classList.add("modal_opened");
-    modalImage.src = cardData.name;
-    modalImage.alt = cardData.link;
+    modalImage.alt = cardData.name;
+    modalImage.src = cardData.link;
   });
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
