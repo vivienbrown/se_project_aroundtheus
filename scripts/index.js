@@ -46,7 +46,7 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 const previewImageModal = document.querySelector("#previewImageModal");
-const modalImage = cardElement.querySelector(".modalImage");
+const modalImage = document.querySelector(".modalImage");
 function createCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
