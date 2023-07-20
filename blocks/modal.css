@@ -88,6 +88,7 @@
   position: absolute;
   top: -40px;
   right: -40px;
+  cursor: pointer;
 }
 
 .modal__close:hover {
@@ -112,6 +113,7 @@
   border-radius: 2px;
   color: #fff;
   border: 0;
+  cursor: pointer;
 }
 .modal__save:hover {
   transition: 0.1s;
