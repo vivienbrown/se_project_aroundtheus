@@ -20,14 +20,13 @@
 }
 
 .modal__container {
-  margin: 0 auto;
+  margin: auto;
   box-sizing: border-box;
   width: 430px;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   color: black;
-  margin: auto;
   padding: 36px;
   position: relative;
 }
@@ -80,7 +79,6 @@
   background-image: url(../images/Close\ Icon.svg);
   background-color: transparent;
   border: none;
-  cursor: pointer;
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -98,7 +96,6 @@
 
 .modal__save {
   margin-top: 47px;
-  cursor: pointer;
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -147,7 +144,6 @@
   }
 
   .modal__save {
-    font-size: 14px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;
