@@ -81,8 +81,8 @@ function closePopup() {
 }
 function handleProfileEditSubmit(e) {
   e.preventDefault();
-  profileTitle.textContent = profileTitle.value;
-  profileDescription.textContent = profileDescription.value;
+  profileTitle.textContent = profileTitleInput.value;
+  profileDescription.textContent = profileDescriptionInput.value;
   closePopup();
 }
 
@@ -108,8 +108,6 @@ profileEditBtn.addEventListener("click", () => {
   profileEditModal.classList.add("modal_opened");
 });
 addNewCardBtn.addEventListener("click", () => {
-  profileTitleInput.value = profileTitle.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
   cardAddModal.classList.add("modal_opened");
 });
 profileCloseBtn.addEventListener("click", closePopup);
