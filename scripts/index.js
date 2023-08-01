@@ -66,7 +66,6 @@ function createCardElement(cardData) {
     modalImage.alt = cardData.name;
     modalImage.src = cardData.link;
     modalText.textContent = cardData.name;
-
   });
   cardTitleEl.textContent = cardData.name;
   cardImageEl.alt = cardData.name;
@@ -74,11 +73,21 @@ function createCardElement(cardData) {
   return cardElement;
 }
 
-function closePopup() {
-  profileEditModal.classList.remove("modal_opened");
-  cardAddModal.classList.remove("modal_opened");
-  previewImageModal.classList.remove("modal_opened");
+function openPopup(modal) {
+  modal.classList.add("modal_opened");
+  openPopup(cardAddModal);
+  openPopup(profileEditModal);
+  openPopup(previewImageModal);
 }
+
+function closePopup(modal) {
+  modal.classList.remove("modal_opened");
+}
+
+closePopup(cardAddModal);
+closePopup(profileEditModal);
+closePopup(previewImageModal);
+
 function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
