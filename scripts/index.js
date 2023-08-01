@@ -82,17 +82,15 @@ function openPopup(modal) {
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
-}
 
-closePopup(cardAddModal);
-closePopup(profileEditModal);
-closePopup(previewImageModal);
+  closePopup(previewImageModal);
+}
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopup();
+  closePopup(profileEditModal);
 }
 
 function handleCardAddSubmit(e) {
@@ -103,7 +101,7 @@ function handleCardAddSubmit(e) {
       link: cardAddLink.value,
     })
   );
-  closePopup();
+  closePopup(cardAddModal);
 }
 
 initialCards.forEach((cardData) => {
