@@ -62,7 +62,7 @@ function createCardElement(cardData) {
     cardElement.remove("cardElement");
   });
   cardImageEl.addEventListener("click", () => {
-    previewImageModal.classList.add("modal_opened");
+    openPopup(previewImageModal);
     modalImage.alt = cardData.name;
     modalImage.src = cardData.link;
     modalText.textContent = cardData.name;
@@ -75,15 +75,10 @@ function createCardElement(cardData) {
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
-  openPopup(cardAddModal);
-  openPopup(profileEditModal);
-  openPopup(previewImageModal);
 }
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
-
-  closePopup(previewImageModal);
 }
 
 function handleProfileEditSubmit(e) {
@@ -112,13 +107,13 @@ initialCards.forEach((cardData) => {
 profileEditBtn.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+  openPopup(profileEditModal);
 });
 addNewCardBtn.addEventListener("click", () => {
-  cardAddModal.classList.add("modal_opened");
+  openPopup(cardAddModal);
 });
-profileCloseBtn.addEventListener("click", closePopup);
-cardAddCloseBtn.addEventListener("click", closePopup);
-previewCloseBtn.addEventListener("click", closePopup);
+profileCloseBtn.addEventListener("click", () => closePopup(profileEditModal));
+cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
+previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
