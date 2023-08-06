@@ -96,6 +96,7 @@ function handleCardAddSubmit(e) {
       link: cardAddLink.value,
     })
   );
+  addCardForm.reset();
   closePopup(cardAddModal);
 }
 
