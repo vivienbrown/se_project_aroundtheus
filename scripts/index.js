@@ -74,11 +74,11 @@ function createCardElement(cardData) {
 }
 
 function openPopup(modal) {
-  modal.classList.add("modal__form");
+  modal.classList.add("modal_opened");
 }
 
 function closePopup(modal) {
-  modal.classList.remove("modal__form");
+  modal.classList.remove("modal_opened");
 }
 
 function handleProfileEditSubmit(e) {
