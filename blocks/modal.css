@@ -32,10 +32,12 @@
 }
 
 .modal__image-container {
-  margin: auto;
+  margin: 0 auto;
   padding: 0;
   position: relative;
 }
+
+
 
 .modal__text {
   margin: 0;
@@ -94,6 +96,7 @@
   opacity: 0.6;
 }
 
+
 .modal__save {
   margin-top: 47px;
   font-family: "Inter", sans-serif;
@@ -129,11 +132,8 @@
     width: 26px;
     height: 26px;
   }
-  .modal_opened {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .edit-modal__container {
+
+  .modal__container {
     width: 282px;
     padding: 25px 22px;
   }
@@ -152,5 +152,8 @@
     font-size: 14px;
     line-height: 17px;
     margin-top: 45px;
+  }
+  .modal__image-container {
+    
   }
 }
