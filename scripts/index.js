@@ -90,13 +90,14 @@ function handleProfileEditSubmit(e) {
 
 function handleCardAddSubmit(e) {
   e.preventDefault();
+  cardAddForm.reset();
   cardListEl.prepend(
     createCardElement({
       name: cardAddTitle.value,
       link: cardAddLink.value,
     })
   );
-  addCardForm.reset();
+
   closePopup(cardAddModal);
 }
 

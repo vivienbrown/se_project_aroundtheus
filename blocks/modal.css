@@ -129,6 +129,10 @@
     width: 26px;
     height: 26px;
   }
+  .modal_opened {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
   .edit-modal__container {
     width: 282px;
     padding: 25px 22px;
