@@ -31,11 +31,7 @@
   position: relative;
 }
 
-.modal__image-container {
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-}
+
 
 
 
@@ -152,8 +148,5 @@
     font-size: 14px;
     line-height: 17px;
     margin-top: 45px;
-  }
-  .modal__image-container {
-    
   }
 }
