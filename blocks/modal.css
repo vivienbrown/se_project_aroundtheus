@@ -31,7 +31,10 @@
   position: relative;
 }
 
-
+.modal__image-container {
+  margin: auto;
+  
+}
 
 
 
