@@ -33,7 +33,7 @@
 
 .modal__image-container {
   margin: auto;
-  
+  position: relative; 
 }
 
 
@@ -130,6 +130,14 @@
     right: 0;
     width: 26px;
     height: 26px;
+  }
+
+  .modal__close-preview {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    right: -30px;
   }
 
   .modal__container {
