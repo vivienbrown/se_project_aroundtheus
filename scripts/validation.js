@@ -6,18 +6,20 @@
 // enabling validation by calling enableValidation()
 // pass all the settings on call
 
-function setEventListeners() {
-
+function setEventListeners(formElement, options) {
+    const {inputSelector} = options;
+    const inputElements = [...formElement.querySelectorAll(options.formSelector)];
+inputElements.forEach
 }
 
 function enableValidation(options) {
-const formElements = document.querySelectorAll(options.formSelector);
+const formElements = [...document.querySelectorAll(options.formSelector)];
 formElements.forEach((formElement) => {
     formElement.addEventListener("submit", (e) => {
         e.preventDefault();
 
     });
-    setEventListeners(formElement. options)
+    setEventListeners(formElement, options);
 });
 }
 
