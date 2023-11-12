@@ -90,6 +90,7 @@ opacity: 0;
   top: calc(100% + 5px);
   left: 0;
   transition: opacity 0.3s;
+  border:none;
 }
 
 .modal__close {

@@ -1,14 +1,19 @@
 // step 1: validate the edit profile: 
 //  both fields are required
-//  name field must contain between 2 and 40 characters
-//  about field must contain between 2 and 200 characters
+
 
 // enabling validation by calling enableValidation()
 // pass all the settings on call
-
+/*
 function showInputError (formElement, inputElement, options) {
 const errorMessageElement = formElement.querySelector('#' + inputElement.id + '--error');
 }//1:02:45
+
+function hideInputError (formElement, inputElement, { inputErrorClass, errorMessageElement } )
+inputElement.classlist.remove(inputErrorClass);
+errorMessageElement.textContent = "";
+errorMessageElement.classList.remove(errorClass);
+
 
 function checkInputValidity (formElement, inputElement, options) {
 if(!inputElement.validity.valid) {
@@ -18,12 +23,30 @@ if(!inputElement.validity.valid) {
 }
 }
 
+function toggleButtonState(inputElements, submitButton) {
+    const foundInvalid = false;
+    inputElements.forEach(input => (
+        if(!inputElement.validity.valid) {
+            foundInvalid = true;
+        
+        }
+    ));
+    if(foundInvalid){
+        submitButton.classList.add(inactiveButtonClass)
+        submitButton.disabled = true;
+    } else {submitButton.classList.remove(inactiveButtonClass)
+        submitButton.disabled = false;
+
+    }
+}
+
 function setEventListeners(formElement, options) {
     const {inputSelector} = options;
     const inputElements = [...formElement.querySelectorAll(options.formSelector)];
 inputElements.forEach((inputElement) => {
     inputElements.addEventListener("input", (e) => {
     checkInputValidity(formElement, inputElement, options);
+  
 });
 })};
 
@@ -45,7 +68,7 @@ formElements.forEach((formElement) => {
 
   function validationMessage(modal) {
     modal.classList.remove("modal__error_visible");
-  }*/
+  }
 
 const config = {
   formSelector: ".modal__form",
