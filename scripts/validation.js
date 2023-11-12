@@ -8,13 +8,13 @@
 
 function showInputError (formElement, inputElement, options) {
 const errorMessageElement = formElement.querySelector('#' + inputElement.id + '--error');
-}
+}//1:02:45
 
 function checkInputValidity (formElement, inputElement, options) {
 if(!inputElement.validity.valid) {
     showInputError(formElement, inputElement, options);
 } else {
-    hideInputErrorformElement, inputElement, options);
+  hideInputError();
 }
 }
 
