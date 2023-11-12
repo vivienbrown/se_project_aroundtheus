@@ -76,6 +76,10 @@
   line-height: 16.94px;
 }
 
+.modal__form-input:invalid {
+  border-bottom: 1px solid red;
+}
+
 .modal__close {
   background-image: url(../images/Close\ Icon.svg);
   background-color: transparent;
