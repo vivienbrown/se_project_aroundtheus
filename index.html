@@ -55,13 +55,17 @@
             class="modal__form-input"
             type="text"
             id="profile-title-input"
-            placeholder="Name" />
+            placeholder="Name"
+            minlength="2" maxlength="40" 
+            required/>
           <input
             name="modal__form"
             class="modal__form-input"
             type="text"
             id="profile-description-input"
-            placeholder="About me" />
+            placeholder="About me"
+            minlength="2" maxlength="200" 
+            required/>
           <button class="modal__save" type="submit">Save</button>
         </form>
       </div>
@@ -79,13 +83,17 @@
             class="modal__form-input"
             type="text"
             id="cardAddTitle"
-            placeholder="Name" />
-          <input
+            placeholder="Name" required/>
+            <!--<span class="popup__error" id="card-name-error"></span>
+            -->
+            <input
             name="modal__form"
             class="modal__form-input"
-            type="text"
+            type="email"
             id="cardAddLink"
-            placeholder="Link" />
+            placeholder="Link" required/>
+            <!--<span class="popup__error" id="card-link-error"></span>
+            -->
           <button class="modal__save" type="submit">Save</button>
         </form>
       </div>
