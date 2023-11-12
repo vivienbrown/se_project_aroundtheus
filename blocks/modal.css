@@ -80,6 +80,16 @@
   border-bottom: 1px solid red;
 }
 
+.modal__error {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+}
+
 .modal__close {
   background-image: url(../images/Close\ Icon.svg);
   background-color: transparent;

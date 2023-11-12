@@ -9,8 +9,12 @@
 function setEventListeners(formElement, options) {
     const {inputSelector} = options;
     const inputElements = [...formElement.querySelectorAll(options.formSelector)];
-inputElements.forEach
-}
+inputElements.forEach(inputElement) => {
+    inputElements.addEventListener("input", (e) => {
+    console.log(inputElement.validationMessage);
+});
+}};
+
 
 function enableValidation(options) {
 const formElements = [...document.querySelectorAll(options.formSelector)];
