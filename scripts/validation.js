@@ -7,7 +7,7 @@
 // pass all the settings on call
 
 function showInputError (formElement, inputElement, options) {
-
+const errorMessageElement = formElement.querySelector('#' + inputElement.id + '--error');
 }
 
 function checkInputValidity (formElement, inputElement, options) {
