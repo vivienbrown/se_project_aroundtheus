@@ -6,12 +6,24 @@
 // enabling validation by calling enableValidation()
 // pass all the settings on call
 
+function showInputError (formElement, inputElement, options) {
+
+}
+
+function checkInputValidity (formElement, inputElement, options) {
+if(!inputElement.validity.valid) {
+    showInputError(formElement, inputElement, options);
+} else {
+    hideInputErrorformElement, inputElement, options);
+}
+}
+
 function setEventListeners(formElement, options) {
     const {inputSelector} = options;
     const inputElements = [...formElement.querySelectorAll(options.formSelector)];
 inputElements.forEach(inputElement) => {
     inputElements.addEventListener("input", (e) => {
-    console.log(inputElement.validationMessage);
+    checkInputValidity(formElement, inputElement, options);
 });
 }};
 
@@ -26,6 +38,14 @@ formElements.forEach((formElement) => {
     setEventListeners(formElement, options);
 });
 }
+
+/*function validationMessage(modal) {
+    modal.classList.add("modal__error_visible");
+  }
+
+  function validationMessage(modal) {
+    modal.classList.remove("modal__error_visible");
+  }*/
 
 const config = {
   formSelector: ".modal__form",

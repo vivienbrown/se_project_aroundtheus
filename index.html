@@ -42,6 +42,7 @@
         <p class="footer__copyright">&copy; 2023 Vivien MF Brown</p>
       </footer>
     </div>
+    <!--modals-->
     <div class="modal" id="profileEditModal">
       <div class="modal__container">
         <button
@@ -50,6 +51,7 @@
           type="button"></button>
         <h2 class="modal__heading">Edit profile</h2>
         <form class="modal__form" name="modal__form">
+
           <input
             name="modal__form"
             class="modal__form-input"
@@ -59,7 +61,7 @@
             minlength="2" maxlength="40" 
             required/>
             <span class="modal__error"></span>
-            
+
           <input
             name="modal__form"
             class="modal__form-input"
@@ -68,8 +70,7 @@
             placeholder="About me"
             minlength="2" maxlength="200" 
             required/>
-            <!--<span class="modal__error"></span>
-            -->
+            <span class="modal__error"></span>
           <button class="modal__save" type="submit">Save</button>
         </form>
       </div>
@@ -114,6 +115,7 @@
           type="button"></button>
       </div>
     </div>
+    <!--end modals-->
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
