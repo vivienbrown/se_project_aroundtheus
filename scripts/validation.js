@@ -21,11 +21,11 @@ if(!inputElement.validity.valid) {
 function setEventListeners(formElement, options) {
     const {inputSelector} = options;
     const inputElements = [...formElement.querySelectorAll(options.formSelector)];
-inputElements.forEach(inputElement) => {
+inputElements.forEach((inputElement) => {
     inputElements.addEventListener("input", (e) => {
     checkInputValidity(formElement, inputElement, options);
 });
-}};
+})};
 
 
 function enableValidation(options) {
