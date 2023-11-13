@@ -136,6 +136,10 @@ opacity: 0;
   opacity: 0.8;
 }
 
+.modal__label {
+  position: relative;
+}
+
 .modal__image {
   max-width: 75vw;
   max-height: 75vh;
