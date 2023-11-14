@@ -42,7 +42,6 @@
         <p class="footer__copyright">&copy; 2023 Vivien MF Brown</p>
       </footer>
     </div>
-    <!--modals-->
     <div class="modal" id="profileEditModal">
       <div class="modal__container">
         <button
@@ -60,13 +59,10 @@
             placeholder="Name"
             minlength="2" maxlength="40" 
             required/>
-            <span class="modal__error" id="profile-title-input--error">Hey, dummy! fix this.</span>
-<!--This span field is appearing beneath the modal form, but also adding an additional input field beneath the name input field.
-My modal__error class also does not seem to be applied.
-  I have commented out the validation.js entirely and it appears that the error is in the HTML. I have compared the profile name input with the profile description input to see if there is a difference and my eyes have not found one.-->
+            <span class="modal__error" id="profile-title-input--error">Hey, dummy! fix this.</span></label>
 
 
-        <!--<label class="modal__label" for="profile-description-input">-->
+
           <input
             name="modal__form"
             class="modal__form-input"
@@ -76,7 +72,6 @@ My modal__error class also does not seem to be applied.
             minlength="2" maxlength="200" 
             required/>
             <span class="modal__error" id="profile-description-input--error">Hey, dummy! You didn't fill out the field correctly.</span>
-          <!--</label>-->
           <button class="modal__save modal__button_disabled" type="submit" </button></button>Save</button>
         </form>
       </div>
@@ -121,7 +116,6 @@ My modal__error class also does not seem to be applied.
           type="button"></button>
       </div>
     </div>
-    <!--end modals-->
     <template id="card-template">
       <li class="card">
         <img class="card__image" src="" alt="" />
