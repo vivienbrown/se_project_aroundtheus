@@ -1,15 +1,13 @@
-// step 1: validate the edit profile: 
-//  both fields are required
 
-
-// enabling validation by calling enableValidation()
-// pass all the settings on call
-/*
-function showInputError (formElement, inputElement, options) {
 const errorMessageElement = formElement.querySelector('#' + inputElement.id + '--error');
-}//1:02:45
 
-function hideInputError (formElement, inputElement, { inputErrorClass, errorMessageElement } )
+
+function showInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
+inputElement.classlist.add(inputErrorClass);
+errorMessageElement.textContent = "";
+errorMessageElement.classList.add(errorClass);
+
+function hideInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
 inputElement.classlist.remove(inputErrorClass);
 errorMessageElement.textContent = "";
 errorMessageElement.classList.remove(errorClass);
@@ -62,7 +60,7 @@ formElements.forEach((formElement) => {
 });
 }
 
-/*function validationMessage(modal) {
+function validationMessage(modal) {
     modal.classList.add("modal__error_visible");
   }
 
