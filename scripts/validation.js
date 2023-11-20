@@ -1,5 +1,5 @@
 
-const errorMessageElement = formElement.querySelector('#' + inputElement.id + '--error');
+const errorMessageElement = formElement.querySelector('#' + inputElement.id + '-error');
 
 
 function showInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
