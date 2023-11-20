@@ -50,7 +50,7 @@
           type="button"></button>
         <h2 class="modal__heading">Edit profile</h2>
         <form class="modal__form" name="modal__form">
-          <label class="modal__label" for="profile-title-input">
+          <!--<label class="modal__label" for="profile-title-input">-->
           <input
             name="title"
             class="modal__form-input"
@@ -59,7 +59,7 @@
             placeholder="Name"
             minlength="2" maxlength="40" 
             required>
-<span class="modal__error" id="profile-title-input--error">you am a butthead.</span></label>
+<span class="modal__error" id="profile-title-input--error">you am a butthead.</span><!--</label>-->
 
           <input
             name="description"
@@ -87,14 +87,14 @@
             class="modal__form-input"
             type="text"
             id="cardAddTitle"
-            placeholder="Name" required/>
+            placeholder="Name" required/><span class="modal__error" id="card-title-input--error">you am a butthead.</span></label>
 
             <input
             name="modal__form"
             class="modal__form-input"
             type="email"
             id="cardAddLink"
-            placeholder="Link" required/>
+            placeholder="Link" required/><span class="modal__error" id="card-link-input--error">you am a butthead.</span></label>
 
           <button class="modal__save" type="submit">Save</button>
         </form>
