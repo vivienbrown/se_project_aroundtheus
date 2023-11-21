@@ -140,7 +140,7 @@ opacity: 1;
 }
 
 
-.modal__save:disabled {
+.modal__save_disabled {
   width: 358px;
 height: 50.15px;
 top: 187px;
