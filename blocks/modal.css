@@ -88,10 +88,16 @@
 opacity: 1;
 }
 
+.modal__button {
+  border: 0;
+  cursor: pointer;
+
+}
+
 .modal__close {
   background-image: url(../images/Close\ Icon.svg);
   background-color: transparent;
-  border: none;
+
   width: 40px;
   height: 40px;
   background-repeat: no-repeat;
@@ -99,12 +105,16 @@ opacity: 1;
   position: absolute;
   top: -40px;
   right: -40px;
-  cursor: pointer;
+
 }
 
 .modal__close:hover {
-  transition: 0.1s;
+
   opacity: 0.6;
+}
+
+modal__button:hover {
+  transition: 0.1s;
 }
 
 
@@ -123,11 +133,9 @@ opacity: 1;
   background: #000000;
   border-radius: 2px;
   color: #fff;
-  border: 0;
-  cursor: pointer;
+
 }
 .modal__save:hover {
-  transition: 0.1s;
   opacity: 0.8;
 }
 
