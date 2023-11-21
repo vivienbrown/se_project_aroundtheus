@@ -72,9 +72,9 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__save",
-  inactiveButtonClass: "modal__save:disabled", //made and added 
+  inactiveButtonClass: "modal__save:disabled",
   inputErrorClass: "modal__input_type_error", //not anywhere else
-  errorClass: "modal__error" //it is in html & CSS
+  errorClass: "modal__error"
 };
 
 enableValidation(config);
