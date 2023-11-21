@@ -14,14 +14,14 @@ errorMessageElement.classList.remove(errorClass);
 
 
 function checkInputValidity (formElement, inputElement, options) {
-if(!inputElement.validity.valid) {
+if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, options);
 } else {
   hideInputError();
 }
 }
 
-function toggleButtonState(inputElements, submitButton) {
+function toggleButtonState (inputElements, submitButton) {
     const foundInvalid = false;
     inputElements.forEach(input => (
         if(!inputElement.validity.valid) {
@@ -29,12 +29,12 @@ function toggleButtonState(inputElements, submitButton) {
         
         }
     ));
-    if(foundInvalid){
+    if(foundInvalid) {
         submitButton.classList.add(inactiveButtonClass)
         submitButton.disabled = true;
-    } else {submitButton.classList.remove(inactiveButtonClass)
+    } else {
+        submitButton.classList.remove(inactiveButtonClass)
         submitButton.disabled = false;
-
     }
 }
 
@@ -72,7 +72,7 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__save",
-  inactiveButtonClass: "modal__save_disabled", //made and added 
+  inactiveButtonClass: "modal__save:disabled", //made and added 
   inputErrorClass: "modal__input_type_error", //not anywhere else
   errorClass: "modal__error" //it is in html & CSS
 };
