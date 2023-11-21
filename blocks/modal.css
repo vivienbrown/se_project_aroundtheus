@@ -150,6 +150,10 @@ border: 1px;
 border: 1px solid rgba(0, 0, 0, 1);
 }
 
+.modal__input_type_error {
+opacity: 0;
+}
+
 .modal__label {
   position: relative;
 }
