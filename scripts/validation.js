@@ -1,5 +1,7 @@
 
 const errorMessageElement = formElement.querySelector('#' + inputElement.id + '-error');
+const showInputError = formElement.querySelector(inputErrorClass);
+const hideInputError = formElement.querySelector(inputErrorClass);
 
 
 function showInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
@@ -72,9 +74,9 @@ const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__save",
-  inactiveButtonClass: "modal__save_disabled",
-  inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error"
+  inactiveButtonClass: ".modal__save_disabled",
+  inputErrorClass: ".modal__input_type_error",
+  errorClass: ".modal__error"
 };
 
 enableValidation(config);
