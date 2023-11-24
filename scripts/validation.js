@@ -4,20 +4,20 @@ const showInputError = formElement.querySelector(inputErrorClass);
 const hideInputError = formElement.querySelector(inputErrorClass);
 
 
-function showInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
+function showInputError (formElement, inputElement, config, { inputErrorClass, errorMessageElement } )
 inputElement.classlist.add(inputErrorClass);
 errorMessageElement.textContent = "";
 errorMessageElement.classList.add(errorClass);
 
-function hideInputError (formElement, inputElement, options, { inputErrorClass, errorMessageElement } )
+function hideInputError (formElement, inputElement, config, { inputErrorClass, errorMessageElement } )
 inputElement.classlist.remove(inputErrorClass);
 errorMessageElement.textContent = "";
 errorMessageElement.classList.remove(errorClass);
 
 
-function checkInputValidity (formElement, inputElement, options) {
+function checkInputValidity (formElement, inputElement, config) {
 if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, options);
+    showInputError(formElement, inputElement, config);
 } else {
   hideInputError();
 }
@@ -40,25 +40,25 @@ function toggleButtonState (inputElements, submitButton) {
     }
 }
 
-function setEventListeners(formElement, options) {
-    const {inputSelector} = options;
-    const inputElements = [...formElement.querySelectorAll(options.formSelector)];
+function setEventListeners(formElement, config) {
+    const {inputSelector} = config;
+    const inputElements = [...formElement.querySelectorAll(config.formSelector)];
 inputElements.forEach((inputElement) => {
     inputElements.addEventListener("input", (e) => {
-    checkInputValidity(formElement, inputElement, options);
+    checkInputValidity(formElement, inputElement, config);
   
 });
 })};
 
 
-function enableValidation(options) {
-const formElements = [...document.querySelectorAll(options.formSelector)];
+function enableValidation(config) {
+const formElements = [...document.querySelectorAll(config.formSelector)];
 formElements.forEach((formElement) => {
     formElement.addEventListener("submit", (e) => {
         e.preventDefault();
 
     });
-    setEventListeners(formElement, options);
+    setEventListeners(formElement, config);
 });
 }
 
