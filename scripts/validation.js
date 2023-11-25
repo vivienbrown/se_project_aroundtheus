@@ -1,9 +1,4 @@
 
-const errorMessageElement = formElement.querySelector('#' + inputElement.id + '-error');
-const showInputError = formElement.querySelector(inputErrorClass);
-const hideInputError = formElement.querySelector(inputErrorClass);
-
-
 function showInputError (formElement, inputElement, config, { inputErrorClass, errorMessageElement } )
 inputElement.classlist.add(inputErrorClass);
 errorMessageElement.textContent = "";
