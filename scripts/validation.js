@@ -1,10 +1,11 @@
-
-function showInputError (formElement, inputElement, config, { inputErrorClass, errorMessageElement } )
+function showInputError (formElement, inputElement, { inputErrorClass, errorMessageElement })
+const errorMessageElement = formElement.querySelector(
+    `#${inputElement.id}-error`
 inputElement.classlist.add(inputErrorClass);
-errorMessageElement.textContent = "";
+errorMessageElement.textContent = errorMessageElement;
 errorMessageElement.classList.add(errorClass);
 
-function hideInputError (formElement, inputElement, config, { inputErrorClass, errorMessageElement } )
+function hideInputError (formElement, inputElement, { inputErrorClass, errorMessageElement } )
 inputElement.classlist.remove(inputErrorClass);
 errorMessageElement.textContent = "";
 errorMessageElement.classList.remove(errorClass);
