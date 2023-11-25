@@ -1,8 +1,8 @@
 function showInputError (formElement, inputElement, { inputErrorClass, errorMessageElement })
 const errorMessageElement = formElement.querySelector(
-    `#${inputElement.id}-error`
+    `#${inputElement.id}-error`)
 inputElement.classlist.add(inputErrorClass);
-errorMessageElement.textContent = errorMessageElement;
+errorMessageElement.textContent = "Please fill in this field";
 errorMessageElement.classList.add(errorClass);
 
 function hideInputError (formElement, inputElement, { inputErrorClass, errorMessageElement } )
