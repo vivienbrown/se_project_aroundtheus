@@ -41,7 +41,6 @@ function toggleButtonState(inputElements, submitButton) {
 }
 
 function setEventListeners(formElement, config) {
-  //const { inputSelector } = config;
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
   inputElements.forEach((inputElement) => {
     inputElement.addEventListener("input", (e) => {
@@ -61,11 +60,11 @@ function enableValidation(config) {
 }
 
 function validationMessage(modal) {
-  modal.classList.add("modal__error");
+  modal.classList.add(errorClass);
 }
 
 function validationMessage(modal) {
-  modal.classList.remove("modal__error");
+  modal.classList.remove(errorClass);
 }
 
 const config = {
