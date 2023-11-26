@@ -13,20 +13,23 @@
         <img
           class="header__image"
           src="./images/header__image.svg"
-          alt="Around the US vector image" />
+          alt="Around the US vector image"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
             class="profile__image"
             src="./images/jacques-cousteau.jpg"
-            alt="avatar" />
+            alt="avatar"
+          />
           <div class="profile__info">
             <h1 class="profile__title" id="profile-title">Jacques Cousteau</h1>
             <button
               type="button"
               class="profile__edit-button"
-              id="profileEditBtn"></button>
+              id="profileEditBtn"
+            ></button>
             <p class="profile__description" id="profile-description">
               Explorer
             </p>
@@ -47,33 +50,48 @@
         <button
           class="modal__button modal__close"
           id="profileCloseBtn"
-          type="button"></button>
+          type="button"
+        ></button>
         <h2 class="modal__heading">Edit profile</h2>
         <form class="modal__form" name="modal__form">
-
-          <input
-            name="title"
-            class="modal__form-input"
-            type="text"
-            id="profile-title-input"
-            placeholder="Name"
-            minlength="2" maxlength="40" 
-            required>
-<span class="modal__error modal__input_type_error" 
-id="profile-title-input-error"></span>
-
-          <input
-            name="description"
-            class="modal__form-input"
-            type="text"
-            id="profile-description-input"
-            placeholder="About me"
-            minlength="2" maxlength="200" 
-            required>
-            <span class="modal__error modal__input_type_error" 
-            id="profile-description-input-error"></span>
-          <button class="modal__button modal__save modal__save_disabled" 
-          type="submit" disabled>Save</button>
+          <label class="modal__label">
+            <input
+              name="title"
+              class="modal__form-input"
+              type="text"
+              id="profile-title-input"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span
+              class="modal__span modal__error"
+              id="profile-title-input-error"
+            ></span>
+          </label>
+          <label class="modal__label">
+            <input
+              name="description"
+              class="modal__form-input"
+              type="text"
+              id="profile-description-input"
+              placeholder="About me"
+              minlength="2"
+              maxlength="200"
+              required />
+            <span
+              class="modal__span modal__error"
+              id="profile-description-input-error"
+            ></span
+          ></label>
+          <button
+            class="modal__button modal__save modal__save_disabled"
+            type="submit"
+            disabled
+          >
+            Save
+          </button>
         </form>
       </div>
     </div>
@@ -82,31 +100,40 @@ id="profile-title-input-error"></span>
         <button
           class="modal__button modal__close"
           id="cardAddCloseBtn"
-          type="button"></button>
+          type="button"
+        ></button>
         <h2 class="modal__heading">New Place</h2>
         <form class="modal__form" name="modal__form">
-          <input
-            name="cardTitle"
-            class="modal__form-input"
-            type="text"
-            id="cardAddTitle"
-            placeholder="Name" required/>
-            <span class="modal__error modal__input_type_error" 
-            id="card-title-input-error">
-        </span>
-
+          <label class="modal__label">
             <input
-            name="modal__form"
-            class="modal__form-input"
-            type="email"
-            id="cardAddLink"
-            placeholder="Link" required/>
-            <span class="modal__error modal__input_type_error" 
-            id="card-link-input-error">
-           </span>
+              name="cardTitle"
+              class="modal__form-input"
+              type="text"
+              id="cardAddTitle"
+              placeholder="Name"
+              required />
+            <span class="modal__span modal__error" id="card-title-input-error">
+            </span
+          ></label>
+          <label class="modal__label">
+            <input
+              name="modal__form"
+              class="modal__form-input"
+              type="email"
+              id="cardAddLink"
+              placeholder="Link"
+              required />
+            <span class="modal__span modal__error" id="card-link-input-error">
+            </span
+          ></label>
 
-          <button class="modal__button modal__save modal__save_disabled" 
-          type="submit" disabled>Save</button>
+          <button
+            class="modal__button modal__save modal__save_disabled"
+            type="submit"
+            disabled
+          >
+            Save
+          </button>
         </form>
       </div>
     </div>
@@ -116,12 +143,14 @@ id="profile-title-input-error"></span>
           class="modal__image"
           id="modalImage"
           alt="card image preview"
-          src="#" />
+          src="#"
+        />
         <p class="modal__text" id="modalText"></p>
         <button
           class="modal__button modal__close modal__close-preview"
           id="previewCloseBtn"
-          type="button"></button>
+          type="button"
+        ></button>
       </div>
     </div>
     <template id="card-template">
@@ -134,7 +163,7 @@ id="profile-title-input-error"></span>
         <button type="button" class="card__delete-button"></button>
       </li>
     </template>
-    <script src="scripts/index.js"></script>
-    <script src="scripts/validation.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
