@@ -7,7 +7,7 @@ function showInputError(formElement, inputElement, config) {
   errorMessageElement.classList.add(config.errorClass);
 }
 
-function hideInputError(formElement, inputElement, config) {
+function hideInputError(formElement, inputElement) {
   inputElement.classList.remove(config.inputErrorClass);
   const errorMessageElement = document.querySelector(
     `#${inputElement.id}-error`
@@ -25,17 +25,17 @@ function checkInputValidity(formElement, inputElement, config) {
 }
 
 function toggleButtonState(inputElements, submitButton) {
-  const foundInvalid = false;
+  let foundInvalid = false;
   inputElements.forEach((input) => {
-    if (!inputElement.validity.valid) {
+    if (!inputElements.validity.valid) {
       foundInvalid = true;
     }
   });
   if (foundInvalid) {
-    submitButton.classList.add(inactiveButtonClass);
+    submitButton.classList.add(config.inactiveButtonClass);
     submitButton.disabled = true;
   } else {
-    submitButton.classList.remove(inactiveButtonClass);
+    submitButton.classList.remove(config.inactiveButtonClass);
     submitButton.disabled = false;
   }
 }
