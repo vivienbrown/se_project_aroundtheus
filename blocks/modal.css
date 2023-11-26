@@ -70,8 +70,8 @@
 
 .modal__span {
   position: absolute;
-  top: 60;
-  left: 0;
+  top: calc(100% + 5px);
+  left: 2px;
 }
 
 .modal__form-input {
