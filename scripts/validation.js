@@ -12,7 +12,7 @@ function hideInputError(formElement, inputElement) {
   const errorMessageElement = document.querySelector(
     `#${inputElement.id}-error`
   );
-  errorMessageElement.textContent = "";
+  errorMessageElement.textContent = inputElement.validationMessage;
   errorMessageElement.classList.remove(config.errorClass);
 }
 
@@ -27,7 +27,7 @@ function checkInputValidity(formElement, inputElement, config) {
 function toggleButtonState(inputElements, submitButton) {
   let foundInvalid = false;
   inputElements.forEach((input) => {
-    if (!inputElements.validity.valid) {
+    if (!input.validity.valid) {
       foundInvalid = true;
     }
   });
