@@ -25,7 +25,7 @@ function checkInputValidity(formElement, inputElement, config) {
 }
 
 function toggleButtonState(inputElements, submitButton) {
-  let foundInvalid = false;
+  const foundInvalid = false;
   inputElements.forEach((input) => {
     if (!input.validity.valid) {
       foundInvalid = true;
@@ -60,11 +60,11 @@ function enableValidation(config) {
 }
 
 function validationMessage(modal) {
-  modal.classList.add(errorClass);
+  modal.classList.add(inputErrorClass);
 }
 
 function validationMessage(modal) {
-  modal.classList.remove(errorClass);
+  modal.classList.remove(inputErrorClass);
 }
 
 const config = {
