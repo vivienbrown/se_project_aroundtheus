@@ -26,8 +26,8 @@ function checkInputValidity(formElement, inputElement, config) {
 
 function toggleButtonState(inputElements, submitButton) {
   const foundInvalid = false;
-  inputElements.forEach((input) => {
-    if (!input.validity.valid) {
+  inputElements.forEach((value) => {
+    if (foundInvalid) {
       foundInvalid = true;
     }
   });
@@ -43,7 +43,7 @@ function toggleButtonState(inputElements, submitButton) {
 function setEventListeners(formElement, config) {
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
   inputElements.forEach((inputElement) => {
-    inputElement.addEventListener("input", (e) => {
+    inputElement.addEventListener("value", (e) => {
       checkInputValidity(formElement, inputElement, config);
     });
   });
