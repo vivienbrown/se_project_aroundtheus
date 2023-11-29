@@ -44,10 +44,9 @@ function toggleButtonState(inputElements, submitButton) {
 }
 
 function setEventListeners(formElement, config) {
-  //const { inputSelector } = config;
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
   inputElements.forEach((inputElement) => {
-    inputElement.addEventListener("input", (e) => {
+    inputElement.addEventListener("input", toggleButtonState (e) => {
       checkInputValidity(formElement, inputElement, config);
     });
   });
