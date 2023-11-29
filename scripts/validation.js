@@ -1,6 +1,9 @@
+//what is the purpose of the stuff inside the () ?
 function showInputError(formElement, inputElement, config) {
+  //put the ERROR MESSAGE wherever we have placed the element error id in the html document. (span)
   const errorMessageElement = formElement.querySelector(
     `#${inputElement.id}-error`
+    //this is a stand in for whatever comes before -error
   );
   inputElement.classList.add(config.inputErrorClass);
   errorMessageElement.textContent = inputElement.validationMessage;
