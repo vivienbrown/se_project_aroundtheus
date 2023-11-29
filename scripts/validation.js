@@ -64,19 +64,11 @@ function enableValidation(config) {
 }
 
 function validationMessage(modal) {
-<<<<<<< HEAD
   modal.classList.add(inputErrorClass);
 }
 
 function validationMessage(modal) {
   modal.classList.remove(inputErrorClass);
-=======
-  modal.classList.add("modal__error");
-}
-
-function validationMessage(modal) {
-  modal.classList.remove("modal__error");
->>>>>>> parent of 4447f6a... add unused class to span els
 }
 
 const config = {
