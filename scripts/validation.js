@@ -46,8 +46,9 @@ function toggleButtonState(inputElements, submitButton) {
 function setEventListeners(formElement, config) {
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
   inputElements.forEach((inputElement) => {
-    inputElement.addEventListener("input", toggleButtonState (e) => {
+    inputElement.addEventListener("input", (e) => {
       checkInputValidity(formElement, inputElement, config);
+      toggleButtonState(inputElements, submitButton);
     });
   });
 }
@@ -60,14 +61,6 @@ function enableValidation(config) {
     });
     setEventListeners(formElement, config);
   });
-}
-
-function validationMessage(modal) {
-  modal.classList.add(inputErrorClass);
-}
-
-function validationMessage(modal) {
-  modal.classList.remove(inputErrorClass);
 }
 
 const config = {
