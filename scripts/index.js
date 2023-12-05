@@ -95,6 +95,15 @@ function handleCardAddSubmit(e) {
     createCardElement({
       name: cardAddTitle.value,
       link: cardAddLink.value,
+
+const object = {
+  variable1: something,
+  variable2: somethingelse,
+};
+
+function renderCard(obect) {
+  //put something in here
+}
     })
   );
   cardAddForm.reset();
@@ -119,3 +128,4 @@ cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
 previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
+
