@@ -7,7 +7,7 @@ function showInputError(formElement, inputElement, config) {
   errorMessageElement.classList.add(config.errorClass);
 }
 
-function hideInputError(formElement, inputElement) {
+function hideInputError(formElement, inputElement, config) {
   inputElement.classList.remove(config.inputErrorClass);
   const errorMessageElement = document.querySelector(
     `#${inputElement.id}-error`
@@ -24,7 +24,7 @@ function checkInputValidity(formElement, inputElement, config) {
   }
 }
 
-function toggleButtonState(inputElements, submitButton) {
+function toggleButtonState(inputElements, submitButton, config) {
   let foundInvalid = false;
   inputElements.forEach((input) => {
     if (!input.validity.valid) {
@@ -40,13 +40,22 @@ function toggleButtonState(inputElements, submitButton) {
   }
 }
 
+function handleCardAddSubmit(e) {
+  e.preventDefault();
+  const name = cardAddTitleInput.value;
+  const link = cardAddLinkInput.value;
+  renderCard({ name, link }, cardListEl);
+  e.target.reset();
+  closeModal(cardAddModal);
+}
+
 function setEventListeners(formElement, config) {
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
   const submitButton = document.querySelector(config.submitButtonSelector);
   inputElements.forEach((inputElement) => {
     inputElement.addEventListener("input", (e) => {
       checkInputValidity(formElement, inputElement, config);
-      toggleButtonState(inputElements, submitButton);
+      toggleButtonState(inputElements, submitButton, config);
     });
   });
 }
