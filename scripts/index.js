@@ -26,7 +26,7 @@ const initialCards = [
 ];
 
 const profileEditBtn = document.querySelector("#profileEditBtn");
-const profileEditModal = document.querySelector("#profileEditModal");
+const profileEditModal = document.querySelector("#profileEditModal"); //2. comparison: profileEditModal is explicitly defined
 const profileCloseBtn = document.querySelector("#profileCloseBtn");
 const profileTitle = document.querySelector("#profile-title");
 const profileDescription = document.querySelector("#profile-description");
@@ -40,7 +40,8 @@ const cardAddTitleInput = document.querySelector("#cardAddTitleInput");
 const cardAddLinkInput = document.querySelector("#cardAddLinkInput");
 const addNewCardBtn = document.querySelector(".profile__add-button");
 const profileEditForm = profileEditModal.querySelector(".modal__form");
-const cardAddForm = cardAddModal.querySelector(".modal__form");
+const cardAddModal = document.querySelector("#cardAddModal"); //testing 1,2,3 testing...this doesn't seem to do anything
+const cardAddForm = cardAddModal.querySelector(".modal__form"); //1. cardAddModal is not explicitly defined but it doesn't seem to matter
 const cardListEl = document.querySelector("#cardsContainer");
 const cardTemplate = document
   .querySelector("#card-template")
@@ -121,3 +122,6 @@ cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
 previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
+
+//cardAddModal, cardAddForm
+//I am trying to figure out how to get save buttons to both work. view side by side of same doc to compare

@@ -6,7 +6,7 @@ function showInputError(formElement, inputElement, config) {
   errorMessageElement.textContent = inputElement.validationMessage;
   errorMessageElement.classList.add(config.errorClass);
 }
-
+//formElement is declared but its value is never read. HOWEVER, removing it breaks the save button on profile
 function hideInputError(formElement, inputElement, config) {
   inputElement.classList.remove(config.inputErrorClass);
   const errorMessageElement = document.querySelector(
@@ -40,6 +40,7 @@ function toggleButtonState(inputElements, submitButton, config) {
   }
 }
 
+/*APPEARS TO BE DUPLICATE OF FUNCTION IN INDEX.JS
 function handleCardAddSubmit(e) {
   e.preventDefault();
   const name = cardAddTitleInput.value;
@@ -47,7 +48,7 @@ function handleCardAddSubmit(e) {
   renderCard({ name, link }, cardListEl);
   e.target.reset();
   closeModal(cardAddModal);
-}
+}*/
 
 function setEventListeners(formElement, config) {
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
