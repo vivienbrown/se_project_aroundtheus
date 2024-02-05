@@ -4,7 +4,6 @@
 
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 0 auto;
-
 }
 
 .page__section {
@@ -14,5 +13,5 @@
 }
 
 .page__content {
-  min-height: 100vh;
+  max-height: 100vh;
 }
