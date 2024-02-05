@@ -52,7 +52,7 @@ function handleCardAddSubmit(e) {
 
 function setEventListeners(formElement, config) {
   const inputElements = [...formElement.querySelectorAll(config.inputSelector)];
-  const submitButton = document.querySelector(config.submitButtonSelector);
+  const submitButton = formElement.querySelector(config.submitButtonSelector);
   inputElements.forEach((inputElement) => {
     inputElement.addEventListener("input", (_e) => {
       checkInputValidity(formElement, inputElement, config);
