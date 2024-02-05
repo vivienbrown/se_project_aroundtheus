@@ -125,4 +125,3 @@ cardAddForm.addEventListener("submit", handleCardAddSubmit);
 
 //index.js set event listeners for click on overlay, keydown esc
 //modal.css check design in figma for accurate color of save button
-//save button:
