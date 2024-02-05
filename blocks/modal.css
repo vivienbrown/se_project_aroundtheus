@@ -133,10 +133,15 @@
 }
 
 .modal__save_disabled {
-  border: 1px;
-  border: 1px solid gray;
-  color: gray;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 2px;
+  opacity: 20%;
   background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+}
+
+.modal__save_disabled:hover {
+  opacity: 20%;
 }
 
 .modal__input_type_error {
