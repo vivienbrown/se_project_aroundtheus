@@ -122,20 +122,17 @@ cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
 previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
-document.addEventListener('keydown', handleEscape);
+document.addEventListener("keydown", handleEscape);
+document.removeEventListener("keydown", handleEscape);
 
 //index.js set event listeners for click on overlay, keydown esc
 
 function handleEscape(evt) {
-  if evt.key = "Escape" {
-    document.querySelector(modal__opened) {
+  if (evt.key) "Escape" {
       closePopup()
     }
   };
-}
 
-// when you open a modal, do this
-document.addEventListener('keydown', handleEscape);
 
 // then when you close a modal, remove the keydown listener from the document
-document.removeEventListener...
+//document.removeEventListener...
