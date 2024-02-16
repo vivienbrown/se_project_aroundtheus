@@ -133,5 +133,7 @@ function handleEscape(evt) {
   }
 }
 
+//I had the wrong parentheses and I didn't know what operator to use
+
 // then when you close a modal, remove the keydown listener from the document
 //document.removeEventListener...
