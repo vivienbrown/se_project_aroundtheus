@@ -128,7 +128,7 @@ document.removeEventListener("keydown", handleEscape);
 //index.js set event listeners for click on overlay, keydown esc
 
 function handleEscape(evt) {
-  if (evt.key) "Escape" {
+  if (evt.key) == "Escape" {
       closePopup()
     }
   };
