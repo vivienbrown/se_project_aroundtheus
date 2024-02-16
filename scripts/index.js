@@ -128,11 +128,10 @@ document.removeEventListener("keydown", handleEscape);
 //index.js set event listeners for click on overlay, keydown esc
 
 function handleEscape(evt) {
-  if (evt.key) == "Escape" {
-      closePopup()
-    }
-  };
-
+  if (evt.key == "Escape") {
+    closePopup();
+  }
+}
 
 // then when you close a modal, remove the keydown listener from the document
 //document.removeEventListener...
