@@ -123,7 +123,6 @@ previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
 document.addEventListener("keydown", handleEscape);
-document.removeEventListener("keydown", handleEscape);
 
 //index.js set event listeners for click on overlay, keydown esc
 
