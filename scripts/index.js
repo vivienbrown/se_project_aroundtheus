@@ -125,8 +125,9 @@ cardAddForm.addEventListener("submit", handleCardAddSubmit);
 document.addEventListener("keydown", handleEscape);
 
 function handleEscape(evt) {
-  console.log("is this working?");
   if (evt.key == "Escape") {
-    closePopup();
+    closePopup(cardAddModal);
+    closePopup(profileEditModal);
+    closePopup(previewImageModal);
   }
 }
