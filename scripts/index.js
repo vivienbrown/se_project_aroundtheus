@@ -123,11 +123,18 @@ previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
 document.addEventListener("keydown", handleEscape);
+document.addEventListener("click", handleOutsideClick);
 
 function handleEscape(evt) {
   if (evt.key == "Escape") {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
     closePopup(previewImageModal);
+  }
+}
+//working on the click on background--it's not defined as an overlay it is part of the modal, added as background
+function handleOutsideClick(evt) {
+  if (eventTarget !== profileEditModal || cardAddModal || previewImageModal) {
+    closePopup();
   }
 }
