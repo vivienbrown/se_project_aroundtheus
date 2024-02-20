@@ -124,16 +124,9 @@ profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
 document.addEventListener("keydown", handleEscape);
 
-//index.js set event listeners for click on overlay, keydown esc
-
 function handleEscape(evt) {
   console.log("is this working?");
-  if (evt.key == "Escape" /*||  "click" overlay*/) {
+  if (evt.key == "Escape") {
     closePopup();
   }
 }
-
-//I had the wrong parentheses and I didn't know what operator to use
-
-// then when you close a modal, remove the keydown listener from the document
-//document.removeEventListener...
