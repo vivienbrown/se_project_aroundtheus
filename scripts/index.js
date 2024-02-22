@@ -123,7 +123,6 @@ previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
 document.addEventListener("keydown", handleEscape);
-document.addEventListener("click", handleOutsideClick);
 
 function handleEscape(evt) {
   if (evt.key == "Escape") {
@@ -132,9 +131,19 @@ function handleEscape(evt) {
     closePopup(previewImageModal);
   }
 }
-//working on the click on background--it's not defined as an overlay it is part of the modal, added as background
-function handleOutsideClick(evt) {
-  if (eventTarget !== profileEditModal || cardAddModal || previewImageModal) {
-    closePopup();
-  }
-}
+// document.addEventListener("click", handleOutsideClick);
+//suggestion from stack overflow
+// function handleOutsideClick(event) {
+//   if (
+//     event.target.closest("#profileEditModal") || //closest doesn't work it makes my buttons stop but the function does still register a click on the page
+//     event.target.closest("#cardAddModal") ||
+//     event.target.closest("#previewImageModal")
+//   ) {
+//     return; // Click happened within a modal, do nothing
+//   }
+
+//   // Close all open modals if the click was outside any modal
+//   closePopup(profileEditModal);
+//   closePopup(cardAddModal);
+//   closePopup(previewImageModal);
+// }
