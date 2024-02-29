@@ -136,6 +136,7 @@ function handleEscape(evt) {
 }
 
 function handleOutsideClick(event) {
+  console.log(event.target);
   if (event.target === event.currentTarget) {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
