@@ -76,10 +76,14 @@ function createCardElement(cardData) {
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
+  document.addEventListener("click", handleOutsideClick);
 }
 
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscape);
+  document.removeEventListener("click", handleOutsideClick);
 }
 
 function handleProfileEditSubmit(e) {
@@ -122,7 +126,6 @@ cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
 previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
-document.addEventListener("keydown", handleEscape);
 
 function handleEscape(evt) {
   if (evt.key == "Escape") {
@@ -131,7 +134,14 @@ function handleEscape(evt) {
     closePopup(previewImageModal);
   }
 }
-// document.addEventListener("click", handleOutsideClick);
+
+function handleOutsideClick(event) {
+  if (event.target === event.currentTarget) {
+    closePopup(cardAddModal);
+    closePopup(profileEditModal);
+    closePopup(previewImageModal);
+  }
+}
 //suggestion from stack overflow
 // function handleOutsideClick(event) {
 //   if (
