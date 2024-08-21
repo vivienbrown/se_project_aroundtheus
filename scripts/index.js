@@ -135,26 +135,10 @@ function handleEscape(evt) {
   }
 }
 
-function handleOutsideClick(event) {
-  console.log(event.target);
-  if (event.target === event.currentTarget) {
+function handleOutsideClick(e) {
+  if (e.target === e.overlay) {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
     closePopup(previewImageModal);
   }
 }
-//suggestion from stack overflow
-// function handleOutsideClick(event) {
-//   if (
-//     event.target.closest("#profileEditModal") || //closest doesn't work it makes my buttons stop but the function does still register a click on the page
-//     event.target.closest("#cardAddModal") ||
-//     event.target.closest("#previewImageModal")
-//   ) {
-//     return; // Click happened within a modal, do nothing
-//   }
-
-//   // Close all open modals if the click was outside any modal
-//   closePopup(profileEditModal);
-//   closePopup(cardAddModal);
-//   closePopup(previewImageModal);
-// }
