@@ -136,7 +136,7 @@ function handleEscape(evt) {
 }
 
 function handleOutsideClick(e) {
-  if (e.target === e.overlay) {
+  if (e.target === "click") {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
     closePopup(previewImageModal);
