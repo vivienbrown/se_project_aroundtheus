@@ -142,3 +142,10 @@ function handleOutsideClick(e) {
     closePopup(previewImageModal);
   }
 }
+const onClickOutside = (element, handleOutsideClick) => {
+  document.addEventListener("click", (e) => {
+    if (!element.contains(e.target)) handleOutsideClick();
+  });
+};
+
+onClickOutside();
