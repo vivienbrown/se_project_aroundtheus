@@ -136,16 +136,12 @@ function handleEscape(evt) {
 }
 
 function handleOutsideClick(e) {
-  if (e.target === "click") {
+  const isClickOutside = e.target.matches(
+    ".cardAddModal, .profileEditModal, .previewImageModal"
+  );
+  if (isClickOutside) {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
     closePopup(previewImageModal);
   }
 }
-const onClickOutside = (element, handleOutsideClick) => {
-  document.addEventListener("click", (e) => {
-    if (!element.contains(e.target)) handleOutsideClick();
-  });
-};
-
-onClickOutside();
