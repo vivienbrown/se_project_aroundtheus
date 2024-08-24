@@ -136,9 +136,7 @@ function handleEscape(evt) {
 }
 
 function handleOutsideClick(e) {
-  const isClickOutside = e.target.classList.contains(
-    ".cardAddModal, .profileEditModal, .previewImageModal"
-  );
+  const isClickOutside = e.target.classList.contains(".modal__container");
   if (isClickOutside) {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
