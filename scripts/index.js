@@ -135,11 +135,34 @@ function handleEscape(evt) {
   }
 }
 
-function handleOutsideClick(e) {
-  const isClickOutside = e.target.classList.contains(".modal__container");
-  if (isClickOutside) {
-    closePopup(cardAddModal);
-    closePopup(profileEditModal);
-    closePopup(previewImageModal);
-  }
+// function handleOutsideClick(e) {
+//   const isClickOutside = e.target.classList.contains(".modal__container");
+//   if (isClickOutside) {
+//     closePopup(cardAddModal);
+//     closePopup(profileEditModal);
+//     closePopup(previewImageModal);
+//   }
+// }
+
+function setupModalClose(modalId, overlayClass) {
+  const modal = document.getElementById(modal);
+
+  document.addEventListener("click", function (event) {
+    // Check if the click is on the overlay (has the overlay class)
+    // and not on the modal content itself
+    if (
+      event.target.classList.contains(
+        ".modal__container",
+        ".modal__image-container"
+      ) &&
+      !modal.contains(event.target)
+    ) {
+      closePopup(cardAddModal);
+      closePopup(profileEditModal);
+      closePopup(previewImageModal);
+    }
+  });
 }
+
+// Usage
+setupModalClose("", "modal__container");
