@@ -83,6 +83,7 @@ function openPopup(modal) {
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
   document.removeEventListener("keydown", handleEscape);
+  console.log("BRITNEY SPEARS"); // why is it calling this 3X?
 }
 
 function handleProfileEditSubmit(e) {
@@ -135,7 +136,6 @@ function handleEscape(evt) {
 }
 
 function handleOverlayClick(evt) {
-  // Check if the click was outside both '.modal__container' and '.modal__image-container'
   const isClickOutsideModalContainer = !evt.target.closest(".modal__container");
   const isClickOutsideImageContainer = !evt.target.closest(
     ".modal__image-container"
