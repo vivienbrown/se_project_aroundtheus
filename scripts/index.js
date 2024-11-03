@@ -34,6 +34,7 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+
 const cardAddTitle = document.querySelector("#cardAddTitle");
 const cardAddLink = document.querySelector("#cardAddLink");
 const cardAddTitleInput = document.querySelector("#cardAddTitleInput");
@@ -127,6 +128,20 @@ cardAddForm.addEventListener("submit", handleCardAddSubmit);
 
 function handleEscape(evt) {
   if (evt.key == "Escape") {
+    closePopup(cardAddModal);
+    closePopup(profileEditModal);
+    closePopup(previewImageModal);
+  }
+}
+
+function handleOverlayClick(evt) {
+  // Check if the click was outside both '.modal__container' and '.modal__image-container'
+  const isClickOutsideModalContainer = !evt.target.closest(".modal__container");
+  const isClickOutsideImageContainer = !evt.target.closest(
+    ".modal__image-container"
+  );
+
+  if (isClickOutsideModalContainer && isClickOutsideImageContainer) {
     closePopup(cardAddModal);
     closePopup(profileEditModal);
     closePopup(previewImageModal);
