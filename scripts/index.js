@@ -126,7 +126,9 @@ cardAddCloseBtn.addEventListener("click", () => closePopup(cardAddModal));
 previewCloseBtn.addEventListener("click", () => closePopup(previewImageModal));
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 cardAddForm.addEventListener("submit", handleCardAddSubmit);
+//change this to target the modal itself not the close button. inside the function that I call, check to see if evt.target is either close button or backdrop itself and not something inside the modal...if the evt.target has either: the class for modal itself or closebutton then modal close
 
+//if evt.target contains classlist(modalsomething) then close
 function handleEscape(evt) {
   if (evt.key == "Escape") {
     closePopup(cardAddModal);
